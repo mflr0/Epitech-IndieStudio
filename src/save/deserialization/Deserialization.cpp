@@ -28,20 +28,20 @@ void bmb::Deserialization::setSaveData() {
     temp = strtok(this->input, "\n");
     static_cast<bmb::mapSave>(temp);
     this->mapSave = temp;
-    static_cast<string> temp;
+    static_cast<std::string>(temp);
     temp = "";
     for (int i = 0; i < this->headerSave.playerNumber; i++) {
         temp = strtok(this->input, "\n");
         static_cast<bmb::playerSave>(temp);
         this->playerSaveArray.push_back(temp);
-        static_cast<string> temp;
+        static_cast<std::string>(temp);
         temp = "";
     }
     for (int i = 0; i < this->headerSave.bombNumber; i++) {
         temp = strtok(this->input, "\n");
         static_cast<bmb::bombSave>(temp);
         this->bombSaveArray.push_back(temp);
-        static_cast<string> temp;
+        static_cast<std::string>(temp);
         temp = "";
     }
 }
